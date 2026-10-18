@@ -47,6 +47,10 @@ accionables basadas en datos.
 
 ---
 
+**Informe ejecutivo** (hallazgos y recomendaciones de negocio, pensado para lectores no técnicos): [`INFORME_EJECUTIVO.md`](INFORME_EJECUTIVO.md).
+
+---
+
 ## Segmentos identificados
 
 | Segmento | Clientes | Gasto promedio |
@@ -63,6 +67,19 @@ accionables basadas en datos.
 ## Stack
 
 Python · Pandas · NumPy · Matplotlib · Seaborn · API Yelp
+
+---
+
+## Cómo reproducirlo
+
+```bash
+git clone https://github.com/mmelgarejo-ds/InsightReach.git
+cd InsightReach
+pip install -r requirements.txt
+jupyter notebook
+```
+
+Correr `1_EDA_exploratorio.ipynb` y luego `2_integracion_api_yelp.ipynb` (requiere una API key propia de Yelp Fusion, no incluida en el repo).
 
 ---
 
