@@ -37,13 +37,35 @@ accionables basadas en datos.
 
 ---
 
-## Hallazgos clave
+## Resumen ejecutivo
 
-- **Ingresos** es la variable más predictiva: correlación 0.75 con frecuencia y 0.68 con gasto
-- Clientes premium **triplican** ingresos y gasto vs no premium
-- **Desequilibrio oferta-demanda:** Vegetariano (53 clientes/local) y Mariscos (70/local) vs Carnes (19/local)
-- Top 25% por gasto concentra el **80.4% de membresías premium**
-- Clientes 18-25 años lideran consumo de licor con **90.1%** vs 61.6% promedio
+El análisis identifica un cliente premium claramente más valioso, un desequilibrio fuerte entre oferta y demanda por tipo de cocina, y un patrón de consumo en clientes jóvenes sin explotar comercialmente. Los tres hallazgos más relevantes:
+
+1. **Ingresos es la señal más fuerte de valor comercial** — correlación 0,75 con frecuencia de visita y 0,68 con gasto promedio.
+
+   <p align="center"><img src="figures/correlacion.png" alt="Matriz de correlación" width="70%"></p>
+
+2. **La membresía premium triplica ingresos y gasto del cliente**, y el top 25% por gasto concentra el 80,4% de las membresías premium — el programa funciona, pero está concentrado en un segmento chico.
+
+   <p align="center"><img src="figures/ingresos_membresia.png" alt="Ingresos por tipo de membresía" width="65%"></p>
+
+3. **Hay un desequilibrio claro entre oferta y demanda por tipo de cocina**: 53 clientes por restaurante vegetariano y 70 por restaurante de mariscos, contra solo 19 por restaurante de carnes (muestra de 200 locales vía API de Yelp, ver límites abajo).
+
+**Otro hallazgo:** clientes de 18-25 años lideran consumo de alcohol con 90,1% vs 61,6% del promedio general — patrón no explotado por ninguna oferta segmentada por edad en el mercado actual.
+
+<p align="center"><img src="figures/alcohol_edad.png" alt="Consumo de alcohol por edad" width="70%"></p>
+
+**Dato vs. hipótesis de negocio:** lo de arriba (correlaciones, proporciones, ratios cliente/local) es lo que muestran los datos. Las recomendaciones derivadas — expandir el programa premium, evaluar apertura de locales vegetarianos/de mariscos, o lanzar marketing segmentado por edad — son hipótesis de negocio a validar, no conclusiones del EDA en sí; están desarrolladas en el [`INFORME_EJECUTIVO.md`](INFORME_EJECUTIVO.md).
+
+---
+
+## Límites de la muestra y de la integración con Yelp
+
+- El cruce oferta-demanda (53/70/19 clientes por local) sale de comparar los 30.000 clientes contra **200 restaurantes** obtenidos de la API de Yelp, filtrados a locales con 50+ reseñas para asegurar una muestra confiable — no es el universo completo de restaurantes del mercado, es una muestra.
+- Esos ratios dependen del radio de búsqueda y los filtros usados contra la API; cambiarlos movería los números.
+- Las correlaciones (0,75 y 0,68) son asociación estadística, no causalidad.
+- Es un corte transversal — una foto en un momento dado, no una serie temporal — no muestra si estos patrones están creciendo, estables o cambiando.
+- El análisis de ingresos/membresía usa como referencia Chicago (5.071 clientes, 16,9% del total); el resto de los hallazgos usan la base completa de 30.000.
 
 ---
 
