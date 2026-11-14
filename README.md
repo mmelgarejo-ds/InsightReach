@@ -6,7 +6,6 @@
 
 EDA sobre 30.000 clientes de restaurantes en ciudades de EE.UU., con integración
 a la API de Yelp para cruzar demanda con oferta real.
-Módulo 1 — Soy Henry Data Science AI.
 
 ---
 
@@ -108,3 +107,5 @@ Correr `1_EDA_exploratorio.ipynb` y luego `2_integracion_api_yelp.ipynb` (requie
 ## Autor
 
 Mauricio Melgarejo · [LinkedIn](https://www.linkedin.com/in/mmelgarejo-ds/) · [GitHub](https://github.com/mmelgarejo-ds)
+
+<sub>Proyecto desarrollado durante la carrera de Data Science de Henry (2026).</sub>
