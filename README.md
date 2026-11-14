@@ -107,4 +107,4 @@ Correr `1_EDA_exploratorio.ipynb` y luego `2_integracion_api_yelp.ipynb` (requie
 
 ## Autor
 
-Mauricio Melgarejo · [LinkedIn](https://www.linkedin.com/in/mauricio-daniel-melgarejo-amaro-482596105/) · [GitHub](https://github.com/mmelgarejo-ds)
+Mauricio Melgarejo · [LinkedIn](https://www.linkedin.com/in/mmelgarejo-ds/) · [GitHub](https://github.com/mmelgarejo-ds)
